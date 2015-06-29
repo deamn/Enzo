@@ -153,7 +153,7 @@ public class LedBargraph extends Control {
     }
     public final void setNoOfLeds(final int NO_OF_LEDS) {
         int amount = NO_OF_LEDS < 5 ? 5 : NO_OF_LEDS;
-        if (amount > noOfLeds.get()) {
+        if ((null == noOfLeds) ? amount > _noOfLeds : amount > noOfLeds.get()) {
             for (int i = 0 ; i < (amount - noOfLeds.get()) ; i++) {
                 ledColors.get().add(Color.RED);
             }
